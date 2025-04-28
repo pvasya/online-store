@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{% block title %}Online Store{% endblock %}</title>
+	<link rel="stylesheet" href="./../static/css/styles.css">
+</head>
+<body>
+	<p>{% if user %}
+				Welcome,<b> {{ user.username }}</b> |
+				{% endif %}
+				<a href="/">Catalog</a>
+				{% if user %}
+				| <a href="/profile">Profile</a> |
+						{% if user.is_admin %}
+								<a href="/orders">All Orders</a> |
+								<a href="/blacklist">Blacklist</a>
+						{% else %}
+								<a href="/orders">My Orders</a> |
+								<a href="/basket">Basket</a>
+						{% endif %}
+						| <a href="/logout">Logout</a>
+				{% else %}
+						| <a href="/login">Login</a>
+				{% endif %}
+		</p>
+
+				
+		{% block content %}{% endblock %}
+
+	<script src="./../static/js/catalog.js"></script>
+</body>
+</html>

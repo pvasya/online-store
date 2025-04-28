@@ -1,0 +1,34 @@
+users
+id	username	name				password								email						address				is_blocked		is_admin    cookie
+1	admin		Piter Smith			bcrypt(admin123,little_secret_key)		admin@online.com			USA					false			true        a1394dee-760d-452f-9680-48e7d8637302
+2	tom			Tom Swift			bcrypt(tom123,little_secret_key)		tom@gmail.com				France				false			false       62cd1c61-6bf8-47d1-992b-19c8b2b891bf
+3	bob			Bob McCartney		bcrypt(bob123,little_secret_key)		bob@outlook.com				Berlin, Germany		false			false       41fd79b5-f833-46ab-91e2-d570421de494
+4	carlos		Carlos Smith		bcrypt(carlos123,little_secret_key)		carlos.smith@gmail.com		London, UK			false			false       5dbc309c-d8e9-4215-b779-2383e71ea3dc
+5	susie		Susie Rodrigo		bcrypt(susie123,little_secret_key)		susie.swift@gmail.com		Paris, France		false			false       ce2af4bf-b721-41c9-bae4-6aeb99936a81
+6	emily		Emily Smith			bcrypt(emily123,little_secret_key)		emily@outlook.com			Canada				false			false       cc7ccf6a-a4c6-4f0f-8579-3e509cbc18b0
+7	kate		Kate Petrenko 		bcrypt(kate123,little_secret_key)		kate@gmail.com				Spain				false			false       6566439b-973b-478c-8cb9-2349bddaaf01
+
+
+
+goods
+id	name 	    url 	price	 is_deleted
+1	pen		    https://scriveiner.com/cdn/shop/files/1M_3.jpg?v=1699032755		5	false
+2   aquarium 	https://m.media-amazon.com/images/I/81-YUadvbsL._AC_SL1500_.jpg		555		false
+3	car 		https://upload.wikimedia.org/wikipedia/commons/a/a4/2019_Toyota_Corolla_Icon_Tech_VVT-i_Hybrid_1.8.jpg		1299	false
+4 	laptop		https://cdn.mos.cms.futurecdn.net/3kcgKLkfPRbskpsYzW239d.jpg 	499		false
+5	smartphone	https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQO5At4WxE2Z5ElXlTPV4MJxsbIl0cDECBvIg&s	299		false
+6	bicycle		https://i.ytimg.com/vi/x6M8s4Km4C8/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAnbvMSaAYBTbTrWSEL-g5cLps4jw		199		false
+7	bed 		https://woodentwist.com/cdn/shop/products/untitled.1274.jpg?v=1743288748	807		false
+8	rocket		https://www.columbiatribune.com/gcdn/authoring/2018/04/24/NCDT/ghows-MO-6a9b386c-6154-2e7e-e053-0100007fa3e0-57eb1c5f.jpeg		7899	false
+9	table		https://etuhome.com/cdn/shop/products/FEY413ANN4-etuhome-provence-table-natural-72-inch-7_5b244675-795f-439a-9981-55c73df0cf7e_1050x700.jpg?v=1643812106	444		false
+10	kivi		https://freshmart.com.ua/storage/web/cache/product/78/kivi.jpg?w=1024&h=768&fit=resize&q=80&fm=pjpg&t=1628598384&s=5aca26cf3f0f9792aac6917272220eb8		3	false
+
+
+
+basket
+id	         user_id	            goodі_id	                        is_active
+
+
+
+orders
+id            user_id           	goods	                    	is_active		   total_price		 

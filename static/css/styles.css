@@ -1,0 +1,236 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+  
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+  
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+  
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+  
+.catalog {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 20px;
+}
+  
+.product {
+    position: relative;
+    width: 200px;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+.product:hover {
+    transform: translateY(-5px);
+}
+.product img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+  
+.product .details {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 8px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.product .details h3 {
+    font-size: 1rem;
+    margin: 0;
+}
+.product .details .price {
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin: 0;
+}
+  
+.product .actions {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 5.8px 0;
+}
+
+.product.admin.add-new {
+    grid-column: span 0;
+    min-height: 200px;
+}
+.product.admin.add-new .details {
+    position: static;
+    background: #f9f9f9;
+    color: #333;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    height: 70%;
+    justify-content: center;
+}
+
+.product.admin.add-new input[type="text"],
+.product.admin.add-new input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding-bottom: 2px;
+}
+  
+button,
+.btn {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.2s;
+}
+button:hover,
+.btn:hover {
+    background: #0056b3;
+}
+  
+form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    margin: 40px auto;
+    box-shadow: 0 1px 4px rgba(255, 18, 18, 0.1);
+}
+form h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+form input[type="text"],
+form input[type="password"],
+form input[type="email"],
+form input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.counter {
+    color: rgb(255, 255, 255);
+    font-size: 1.1rem;
+}
+.profile,
+.basket-list,
+.order-list,
+.blacklist {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 800px;
+    margin: 20px auto;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+.profile h2,
+.basket-list h2,
+.order-list h2,
+.blacklist h2 {
+    margin-bottom: 20px;
+}
+  
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+table th,
+table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+table tr:hover {
+    background-color: #f1f1f1;
+}
+  
+.error {
+    color: #d9534f;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.basket-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto 20px;
+}
+.basket-summary {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.blacklist-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+  
+.blacklist-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 10px 15px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+ 
+.blacklist-item.blocked {
+    background: #ffecec;
+    border-color: #ffb3b3;
+}  

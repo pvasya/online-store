@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block title %}Blacklist{% endblock %}
+{% block content %}
+<h2>Blacklist</h2>
+<ul class="blacklist-list">
+    {% for u in users %}
+    {% if not u.is_admin %}
+    <li class="blacklist-item {% if u.is_blocked %}blocked{% endif %}">
+        <span><strong>{{ u.username }}</strong> — Blocked: {{ u.is_blocked }}</span>
+        <form method="POST" action="/blacklist/toggle" style="margin: 0;">
+            <input type="hidden" name="user_id" value="{{ u.id }}">
+            <button class="btn" type="submit" style="padding: 6px 12px;">
+                {% if u.is_blocked %}Unblock{% else %}Block{% endif %}
+            </button>
+        </form>
+    </li>
+    {% endif %}
+    {% endfor %}
+</ul>
+{% endblock %}
